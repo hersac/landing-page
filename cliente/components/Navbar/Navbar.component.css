@@ -1,0 +1,34 @@
+#navbar {
+  background-color: lightblue;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+}
+
+.navbar__logo {
+  width: 30%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.navbar__lista {
+  background-color: orange;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar__lista__opcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__lista__opcion__link {
+  text-decoration: none;
+}

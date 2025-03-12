@@ -1,3 +1,14 @@
+/*/imports de componentes/*/
+
+@import url("../../components/Navbar/Navbar.component.css");
+
+/*imports de modulos*/
+
+@import url('../../views/Inicio/Inicio.page.css');
+
+:root {
+}
+
 * {
   margin: 0;
   padding: 0;
