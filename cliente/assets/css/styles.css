@@ -1,16 +1,12 @@
-/*/imports de componentes/*/
+/* Imports de globales */
+
+@import url("_variables.css");
+@import url("_globals.css");
+
+/* Imports de componentes */
 
 @import url("../../components/Navbar/Navbar.component.css");
 
-/*imports de modulos*/
+/* Imports de modulos */
 
-@import url('../../views/Inicio/Inicio.page.css');
-
-:root {
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url("../../views/Inicio/Inicio.page.css");
