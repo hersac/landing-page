@@ -1,0 +1,60 @@
+# Editor: VS Code
+.vscode/
+*.code-workspace
+
+# Editor: Sublime Text
+*.sublime-project
+*.sublime-workspace
+sublime-text-*
+
+# Editor: Neovim
+.swap/
+.session/
+shada/
+*.swp
+*.swo
+*.swn
+*.undo
+*.backup
+
+# Node.js / JavaScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+coverage/
+.env
+.env.local
+.env.*.local
+
+# PHP
+vendor/
+composer.lock
+composer.phar
+*.cache
+*.env
+.env.*
+/storage
+/public/storage
+Homestead.yaml
+Homestead.json
+vagrant/
+
+# Logs generales
+logs/
+*.log
+*.log.*
+*.out
+*.err
+*.trace
+*.pid
+*.gz
+nohup.out
+
+# General OS files
+.DS_Store
+Thumbs.db
+desktop.ini
