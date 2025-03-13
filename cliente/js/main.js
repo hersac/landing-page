@@ -8,7 +8,10 @@ title.textContent = "Landing page";
 // componente Navbar
 const navbar = new Navbar({
   inicioTitle: "Inicio",
-  nosotrosTitle: "Nosotros",
+  nosotrosTitle: "Nosótros",
+  serviciosTitle: "Servicios",
+  proyectosTitle: "Proyectos",
+  contactoTitle: "Contacto",
 });
 
 navbar.on("navbar-click", (event) => {
