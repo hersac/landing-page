@@ -1,0 +1,73 @@
+/* Estilos para tabletas */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media screen and (min-width: 1025px) {
+  #navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+  }
+
+  .navbar__logo {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar__lista {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+
+  .navbar__lista__opcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbar__lista__opcion__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  .navbar__lista__opcion__link:hover {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: ease-in-out 0.3s;
+    animation: moveBg 5s infinite linear;
+  }
+
+  .navbar__lista__opcion__link:active {
+    background-color: var(--primary-color);
+    color: var(--text-color-secundary);
+    filter: brightness(1.3);
+  }
+
+  @keyframes moveBg {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}

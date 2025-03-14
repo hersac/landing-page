@@ -1,25 +1,19 @@
+@import url("Navbar.breakpoint.css");
+
 #navbar {
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 60px;
+  height: 89vh;
 }
 
 .navbar__logo {
-  width: 30%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 70px;
 }
 
 .navbar__lista {
-  width: 100%;
-  height: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
   list-style: none;
 }
 
@@ -27,8 +21,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  height: 50px;
+  border-bottom: solid 0.5px var(--primary-color);
 }
 
 .navbar__lista__opcion__link {
@@ -36,7 +30,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: var(--text-color-secundary);
+  color: var(--primary-color);
 }
 
 .navbar__lista__opcion__link:hover {
