@@ -1,36 +1,45 @@
-<nav id="navbar" class="navbar">
+<div class="btn-menu-content">
+  <button><i class="fa-solid fa-bars"></i> MENU</button>
+</div>
+
+<nav id="navbar">
   <div class="navbar__logo">H</div>
   <ul class="navbar__lista">
     <li class="navbar__lista__opcion">
-      <a href="/" class="navbar__lista__opcion__link">{{ inicioTitle }}</a>
+      <a href="/" class="navbar__lista__opcion__link">{{ titulos.inicioTitle }}</a>
     </li>
     <li class="navbar__lista__opcion">
       <a href="/nosotros" class="navbar__lista__opcion__link">{{
-        nosotrosTitle
-      }}</a>
+        titulos.nosotrosTitle
+        }}</a>
     </li>
     <li class="navbar__lista__opcion">
       <a href="/servicios" class="navbar__lista__opcion__link">{{
-        serviciosTitle
-      }}</a>
+        titulos.serviciosTitle
+        }}</a>
     </li>
     <li class="navbar__lista__opcion">
       <a href="/proyectos" class="navbar__lista__opcion__link">{{
-        proyectosTitle
-      }}</a>
+        titulos.proyectosTitle
+        }}</a>
     </li>
     <li class="navbar__lista__opcion">
       <a href="/contacto" class="navbar__lista__opcion__link">{{
-        contactoTitle
-      }}</a>
+        titulos.contactoTitle
+        }}</a>
     </li>
   </ul>
 
-  <div>
-    <button id="btnLogout" class="btn btn-primary">logout</button>
+  <div class="navbar__darkBtn">
+    <button id="btnDarkMode" class="">
+      <span id="darkModeIcons">
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-toggle-on"></i>
+      </span>
+      <span id="lightModeIcons">
+        <i class="fa-regular fa-sun"></i>
+        <i class="fa-solid fa-toggle-off"></i>
+      </span>
+    </button>
   </div>
 </nav>
-
-<div class="btn-menu-content" >
-  <button>MENU</button>
-</div>

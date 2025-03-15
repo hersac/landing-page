@@ -1,5 +1,11 @@
 @import url("Navbar.breakpoint.css");
 
+.btn-menu-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #navbar {
   height: 89vh;
 }
@@ -48,13 +54,22 @@
   filter: brightness(1.3);
 }
 
+.navbar__darkBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
 @keyframes moveBg {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }

@@ -1,31 +1,27 @@
 /* Estilos para tabletas */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-}
+@media screen and (min-width: 601px) and (max-width: 1024px) {}
 
 /* Estilos para pantallas grandes (escritorio) */
 @media screen and (min-width: 1025px) {
+  .btn-menu-content {
+    display: none !important;
+  }
+
   #navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 60px;
+    height: 40px !important;
   }
 
   .navbar__logo {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 20% !important;
   }
 
   .navbar__lista {
     width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
+    flex-direction: row !important;
   }
 
   .navbar__lista__opcion {
@@ -34,6 +30,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    border: none !important;
   }
 
   .navbar__lista__opcion__link {
@@ -59,13 +56,20 @@
     filter: brightness(1.3);
   }
 
+  .navbar__darkBtn {
+    width: 5% !important;
+    height: 100% !important;
+  }
+
   @keyframes moveBg {
     0% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
+
     100% {
       background-position: 0% 50%;
     }

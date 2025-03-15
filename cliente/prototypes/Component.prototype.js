@@ -38,20 +38,43 @@ export class Component {
 
   renderProps() {
     if (!this.container) {
-      console.error(
-        "❌ No se puede renderizar props porque this.container es null."
-      );
+      console.error("❌ No se puede renderizar props porque this.container es null.");
       return;
     }
 
     let html = this.container.innerHTML;
-    Object.keys(this.props).forEach((key) => {
+
+    // Función recursiva para aplanar objetos y arrays
+    function flatten(obj, prefix = "") {
+      return Object.keys(obj).reduce((acc, key) => {
+        const fullKey = prefix ? `${prefix}.${key}` : key;
+        const value = obj[key];
+
+        if (Array.isArray(value)) {
+          // Convertimos los arrays en una cadena separada por comas
+          acc[fullKey] = value.join(", ");
+        } else if (typeof value === "object" && value !== null) {
+          Object.assign(acc, flatten(value, fullKey)); // Llamado recursivo
+        } else {
+          acc[fullKey] = value.toString(); // Convertimos todo a string para evitar errores
+        }
+        return acc;
+      }, {});
+    }
+
+    // Convertir `props` en una estructura aplanada
+    const flatProps = flatten(this.props);
+
+    // Reemplazar valores en el HTML
+    Object.keys(flatProps).forEach((key) => {
       const regex = new RegExp(`{{\\s*${key}\\s*}}`, "g");
-      html = html.replace(regex, this.props[key]);
+      html = html.replace(regex, flatProps[key]);
     });
 
     this.container.innerHTML = html;
   }
+
+
 
   attachEvents() {
     Object.keys(this.events).forEach((eventName) => {

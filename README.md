@@ -10,16 +10,16 @@ Para el cliente se trabaja con HTML, CSS y Javascript nativo, pero con un enfoqu
 
 Para la ejecucion del proyecto en develop se debe usar alguna herramienta como hht-server o live-server, se pueden instalar de la siguiente manera:
 
-#### Http Server
+### Http Server
 
 npm install -g http-server
 
-**Ejecuación**
+##### **Ejecuación**
 http-server -p 10000 --spa
 
-#### Live Server
+### Live Server
 
 npm install -g live-server
 
-**Ejecución**
+##### **Ejecución**
 live-server --port=10000 --entry-file=index.html
