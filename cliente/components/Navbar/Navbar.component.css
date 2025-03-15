@@ -17,6 +17,10 @@
   height: 70px;
 }
 
+.navbar__logo img {
+  width: 30%;
+}
+
 .navbar__lista {
   display: flex;
   flex-direction: column;
@@ -74,3 +78,4 @@
     background-position: 0% 50%;
   }
 }
+
