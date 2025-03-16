@@ -1,6 +1,19 @@
 import { Router } from "../router/index.route.js";
 import { Navbar } from "../components/Navbar/Navbar.component.js";
 
+// Rutas de la pagina
+document.addEventListener("DOMContentLoaded", () => {
+  const routes = {
+    "/": "views/Inicio/Inicio.page.html",
+    "/nosotros": "views/Nosotros/Nosotros.page.html",
+    "/servicios": "views/Servicios/Servicios.page.html",
+    "/proyectos": "views/Proyectos/Proyectos.page.html",
+    "/contacto": "views/Contacto/Contacto.page.html"
+  };
+
+  new Router(routes);
+});
+
 // Titulo de la pagina
 const title = document.querySelector("title");
 title.textContent = "Landing page";
@@ -40,15 +53,4 @@ navbar.on("dark-mode-on", (event) => {
   }
 });
 
-// Rutas de la pagina
-document.addEventListener("DOMContentLoaded", () => {
-  const routes = {
-    "/": "views/Inicio/Inicio.page.html",
-    "/nosotros": "views/Nosotros/Nosotros.page.html",
-    "/servicios": "views/Servicios/Servicios.page.html",
-    "/proyectos": "views/Proyectos/Proyectos.page.html",
-    "/contacto": "views/Contacto/Contacto.page.html"
-  };
 
-  new Router(routes);
-});
