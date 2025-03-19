@@ -18,6 +18,9 @@ export class Router {
   }
 
   async loadView(path) {
+    alert(path);
+    alert(this.routes[path]);
+
     if (!this.routes[path]) {
       console.warn(`Ruta no encontrada: ${path}. Redirigiendo a '/'`);
       path = "/";

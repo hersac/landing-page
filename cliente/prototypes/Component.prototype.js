@@ -27,7 +27,7 @@ export class Component {
       this.container.replaceWith(selectedElement);
       this.container = selectedElement;
 
-      document.body.appendChild(this.container);
+      // document.body.appendChild(this.container);
 
       this.renderProps();
       this.attachEvents();
@@ -38,7 +38,9 @@ export class Component {
 
   renderProps() {
     if (!this.container) {
-      console.error("❌ No se puede renderizar props porque this.container es null.");
+      console.error(
+        "❌ No se puede renderizar props porque this.container es null."
+      );
       return;
     }
 
@@ -74,8 +76,6 @@ export class Component {
     this.container.innerHTML = html;
   }
 
-
-
   attachEvents() {
     Object.keys(this.events).forEach((eventName) => {
       this.container.addEventListener(eventName, this.events[eventName]);
@@ -89,5 +89,9 @@ export class Component {
   emit(eventName, data) {
     const event = new CustomEvent(eventName, { detail: data });
     this.container.dispatchEvent(event);
+  }
+
+  getDataHtml() {
+    return this.container;
   }
 }

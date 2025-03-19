@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "/nosotros": "views/Nosotros/Nosotros.page.html",
     "/servicios": "views/Servicios/Servicios.page.html",
     "/proyectos": "views/Proyectos/Proyectos.page.html",
-    "/contacto": "views/Contacto/Contacto.page.html"
+    "/contacto": "views/Contacto/Contacto.page.html",
   };
 
   new Router(routes);
@@ -30,7 +30,7 @@ const navbar = new Navbar({
     proyectosTitle: "Proyectos",
     contactoTitle: "Contacto",
   },
-  estaDarkMode: darkModeStorage
+  estaDarkMode: darkModeStorage,
 });
 
 // Aplicar el Dark Mode al cargar la página
@@ -53,4 +53,5 @@ navbar.on("dark-mode-on", (event) => {
   }
 });
 
-
+const header = document.querySelector("header");
+header.appendChild(navbar.getDataHtml());
