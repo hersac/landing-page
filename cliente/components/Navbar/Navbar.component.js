@@ -17,10 +17,18 @@ export class Navbar extends Component {
 
       if (btnMenu) {
         btnMenu.addEventListener("click", () => {
-          console.log(navbar.style.display);
           navbar.style.display = navbar.style.display === "none" ? "block" : "none";
         });
       }
+
+      // Reiniciar display al modificar el tamaño de la ventana
+      window.addEventListener("resize", () => {
+        if (!mediaQuery.matches) {
+          navbar.style.display = "none";
+          return;
+        }
+        navbar.style.display = "block";
+      });
 
       // Boton para Dark Mode
       const btnDarkMode = document.querySelector("#btnDarkMode");
