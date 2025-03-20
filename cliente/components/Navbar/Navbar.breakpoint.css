@@ -3,6 +3,12 @@
 
 /* Estilos para pantallas grandes (escritorio) */
 @media screen and (min-width: 1025px) {
+  #navbar_component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .btn-menu-content {
     display: none !important;
   }
@@ -11,11 +17,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 40px !important;
+    height: 60px !important;
   }
 
   .navbar__logo {
     width: 20% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .navbar__lista {

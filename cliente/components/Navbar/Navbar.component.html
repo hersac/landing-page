@@ -1,50 +1,54 @@
-<div class="btn-menu-content">
-  <button><i class="fa-solid fa-bars"></i> MENU</button>
+
+<div id="navbar_component">
+  <button class="btn-menu-content" id="btnMenu">
+    <i class="fa-solid fa-bars"></i> MENU
+  </button>
+
+  <nav id="navbar">
+    <div class="navbar__logo">
+      <img src="assets/img/logo.png" alt="logo" />
+    </div>
+    <ul class="navbar__lista">
+      <li class="navbar__lista__opcion">
+        <a href="/" class="navbar__lista__opcion__link">{{
+          titulos.inicioTitle
+        }}</a>
+      </li>
+      <li class="navbar__lista__opcion">
+        <a href="/nosotros" class="navbar__lista__opcion__link">{{
+          titulos.nosotrosTitle
+        }}</a>
+      </li>
+      <li class="navbar__lista__opcion">
+        <a href="/servicios" class="navbar__lista__opcion__link">{{
+          titulos.serviciosTitle
+        }}</a>
+      </li>
+      <li class="navbar__lista__opcion">
+        <a href="/proyectos" class="navbar__lista__opcion__link">{{
+          titulos.proyectosTitle
+        }}</a>
+      </li>
+      <li class="navbar__lista__opcion">
+        <a href="/contacto" class="navbar__lista__opcion__link">{{
+          titulos.contactoTitle
+        }}</a>
+      </li>
+    </ul>
+
+    <div class="navbar__darkBtn">
+      <button id="btnDarkMode">
+        <span id="darkModeIcons">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-toggle-on"></i>
+        </span>
+        <span id="lightModeIcons">
+          <i class="fa-regular fa-sun"></i>
+          <i class="fa-solid fa-toggle-off"></i>
+        </span>
+      </button>
+    </div>
+  </nav>
+
 </div>
-
-<nav id="navbar">
-  <div class="navbar__logo">
-    <img src="assets/img/logo.png" alt="logo" />
-  </div>
-  <ul class="navbar__lista">
-    <li class="navbar__lista__opcion">
-      <a href="/" class="navbar__lista__opcion__link">{{
-        titulos.inicioTitle
-      }}</a>
-    </li>
-    <li class="navbar__lista__opcion">
-      <a href="/nosotros" class="navbar__lista__opcion__link">{{
-        titulos.nosotrosTitle
-      }}</a>
-    </li>
-    <li class="navbar__lista__opcion">
-      <a href="/servicios" class="navbar__lista__opcion__link">{{
-        titulos.serviciosTitle
-      }}</a>
-    </li>
-    <li class="navbar__lista__opcion">
-      <a href="/proyectos" class="navbar__lista__opcion__link">{{
-        titulos.proyectosTitle
-      }}</a>
-    </li>
-    <li class="navbar__lista__opcion">
-      <a href="/contacto" class="navbar__lista__opcion__link">{{
-        titulos.contactoTitle
-      }}</a>
-    </li>
-  </ul>
-
-  <div class="navbar__darkBtn">
-    <button id="btnDarkMode" class="">
-      <span id="darkModeIcons">
-        <i class="fa-solid fa-moon"></i>
-        <i class="fa-solid fa-toggle-on"></i>
-      </span>
-      <span id="lightModeIcons">
-        <i class="fa-regular fa-sun"></i>
-        <i class="fa-solid fa-toggle-off"></i>
-      </span>
-    </button>
-  </div>
-</nav>
 

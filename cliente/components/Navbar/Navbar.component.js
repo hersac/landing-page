@@ -2,14 +2,30 @@ import { Component } from "../../prototypes/Component.prototype.js";
 
 export class Navbar extends Component {
   constructor(props = {}) {
-    super("#navbar", props);
+    super("#navbar_component", props);
 
     this.load("components/Navbar/Navbar.component.html").then(() => {
+      let estaActivoDarkMode = props.estaDarkMode;
+
+      // Boton para menu en tabletas y android
+      const navbar = document.querySelector("#navbar");
+      const btnMenu = document.querySelector("#btnMenu");
+      const mediaQuery = window.matchMedia("(min-width: 1025px)");
+      if (!mediaQuery.matches) {
+        navbar.style.display = "none";
+      }
+
+      if (btnMenu) {
+        btnMenu.addEventListener("click", () => {
+          console.log(navbar.style.display);
+          navbar.style.display = navbar.style.display === "none" ? "block" : "none";
+        });
+      }
+
+      // Boton para Dark Mode
       const btnDarkMode = document.querySelector("#btnDarkMode");
       const darkModeIcons = document.querySelector("#darkModeIcons");
       const lightModeIcons = document.querySelector("#lightModeIcons");
-
-      let estaActivoDarkMode = props.estaDarkMode;
 
       const actualizarIconos = () => {
         darkModeIcons.style.display = estaActivoDarkMode ? "block" : "none";

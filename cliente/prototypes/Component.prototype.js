@@ -27,8 +27,6 @@ export class Component {
       this.container.replaceWith(selectedElement);
       this.container = selectedElement;
 
-      // document.body.appendChild(this.container);
-
       this.renderProps();
       this.attachEvents();
     } catch (error) {
@@ -46,28 +44,24 @@ export class Component {
 
     let html = this.container.innerHTML;
 
-    // Función recursiva para aplanar objetos y arrays
     function flatten(obj, prefix = "") {
       return Object.keys(obj).reduce((acc, key) => {
         const fullKey = prefix ? `${prefix}.${key}` : key;
         const value = obj[key];
 
         if (Array.isArray(value)) {
-          // Convertimos los arrays en una cadena separada por comas
           acc[fullKey] = value.join(", ");
         } else if (typeof value === "object" && value !== null) {
           Object.assign(acc, flatten(value, fullKey)); // Llamado recursivo
         } else {
-          acc[fullKey] = value.toString(); // Convertimos todo a string para evitar errores
+          acc[fullKey] = value.toString(); 
         }
         return acc;
       }, {});
     }
 
-    // Convertir `props` en una estructura aplanada
     const flatProps = flatten(this.props);
 
-    // Reemplazar valores en el HTML
     Object.keys(flatProps).forEach((key) => {
       const regex = new RegExp(`{{\\s*${key}\\s*}}`, "g");
       html = html.replace(regex, flatProps[key]);
