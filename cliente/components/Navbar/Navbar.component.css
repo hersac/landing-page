@@ -23,7 +23,7 @@
 }
 
 #navbar {
-  height: 89vh;
+  height: 100%;
 }
 
 .navbar__logo {
@@ -80,6 +80,7 @@
 
 #btnDarkMode {
   cursor: pointer;
+  padding: 10px;
 }
 
 .navbar__darkBtn {

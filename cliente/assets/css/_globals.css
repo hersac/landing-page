@@ -70,3 +70,8 @@ button {
 .shadow-sm {
   box-shadow: var(--shadow-sm);
 }
+
+#app {
+  padding: 10px;
+  height: 100vh;
+}
